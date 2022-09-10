@@ -1,18 +1,25 @@
 {
-  "name": "assets",
+  "name": "RS-Bot",
   "version": "1.0.0",
-  "description": "",
+  "description": "An API endpoint for your bots to process Rocksmith Song Searches!",
   "main": "index.js",
   "scripts": {
+    "dev": "concurrently \"cd ./server; npm run dev\" \"cd ./client; python main.py\"",
+    "install:all": "npm i && concurrently \"cd ./server; npm install\" \"echo 'Yo'\"",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VolksRat71/RS-Bot.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "axios": "^0.27.2",
-    "dotenv": "^16.0.2",
-    "express": "^4.18.1",
-    "mongoose": "^6.5.4"
+  "bugs": {
+    "url": "https://github.com/VolksRat71/RS-Bot/issues"
+  },
+  "homepage": "https://github.com/VolksRat71/RS-Bot#readme",
+  "devDependencies": {
+    "concurrently": "^7.4.0"
   }
 }
